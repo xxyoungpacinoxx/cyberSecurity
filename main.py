@@ -29,5 +29,10 @@ for item in final_export:
     print(item)
 end_time = datetime.datetime.now()
 
-print(f'Duration:{end_time - start_time}')
+duration = end_time - start_time
+print(f'Duration: {duration}')
+
+with open('wipass.txt', 'w') as file:
+    file.write(str(final_export))
+    file.write(str(f'Duration: {duration}'))
 
